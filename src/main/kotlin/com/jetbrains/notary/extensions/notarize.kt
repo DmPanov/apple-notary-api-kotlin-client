@@ -84,7 +84,7 @@ suspend fun NotaryClientV2.notarize(
     logger.info("Issuing notarization submission '${request.submissionName}' (${request.sha256})...")
     val submitResponse = submitSoftware(request)
     logger.debug("Submission response:\n${submitResponse}")
-
+ //
     val submissionAttributes = submitResponse.data?.attributes
         ?: error("Apple Notary API response is missing AWS credentials")
 
